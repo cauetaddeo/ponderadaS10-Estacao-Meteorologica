@@ -1,11 +1,7 @@
 
-Com base na imagem dos critérios de avaliação que você enviou, adaptei o README para deixar **explícito** para o seu professor que o seu projeto atende a **100% dos requisitos exigidos**. 
 
-Essa é uma excelente estratégia (conhecida como "README defensivo"), pois facilita a correção e garante que o avaliador não deixe passar nenhum ponto da sua nota.
 
-Copie o código abaixo e substitua o conteúdo do seu `README.md` atual:
 
-```markdown
 # Sistema de Medição de Estação Meteorológica IoT
 
 Este projeto é a entrega final da Atividade Ponderada (Módulo 5). Trata-se de um sistema completo (End-to-End) para monitoramento meteorológico, integrando hardware (Arduino), backend (Python/Flask), banco de dados (SQLite) e frontend responsivo com gráficos dinâmicos.
@@ -48,7 +44,7 @@ Este projeto foi estruturado para atender integralmente aos requisitos da discip
 ---
 
 ## Estrutura de Arquivos
-
+```
 /
 |-- main.py              # Servidor Flask e definição das rotas da API/Web
 |-- serial_reader.py     # Script leitor da porta serial e integrador da API
