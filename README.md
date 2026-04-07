@@ -83,5 +83,12 @@ Este projeto é um sistema completo de ponta a ponta para monitoramento meteorol
 | DELETE | /leituras/<id> | Exclui uma leitura específica do banco de dados.        |
 
 
+# Fotos do prototipo:
+
+![Imagem 1](/POND1.jpeg)
+
+![Imagem 2](/POND2.jpeg)
+
+![Imagem 3](/POND3.jpeg)
 
 
