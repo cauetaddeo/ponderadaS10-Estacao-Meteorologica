@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Estação Meteorológica IoT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .graficos-container { display: flex; justify-content: space-between; gap: 20px; margin-top: 20px; }
+        .grafico-box { background: white; padding: 15px; border-radius: 8px; width: 32%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <h1>Painel de Controle - Estação Meteorológica</h1>
+    
+    <div style="margin-bottom: 20px;">
+        <a href="/historico">
+            <button style="padding: 10px 20px; background-color: #2196F3; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Ver Histórico e Editar Dados
+            </button>
+        </a>
+    </div>
+
+    <div class="graficos-container">
+        <div class="grafico-box"><canvas id="graficoTemp"></canvas></div>
+        <div class="grafico-box"><canvas id="graficoUmid"></canvas></div>
+        <div class="grafico-box"><canvas id="graficoPressao"></canvas></div>
+    </div>
+    
+    <div class="dashboard" style="margin-top: 30px;">
+        <h2>Últimas Leituras (Atualização Automática)</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Data/Hora</th>
+                    <th>Temperatura (°C)</th>
+                    <th>Umidade (%)</th>
+                    <th>Pressão (hPa)</th>
+                </tr>
+            </thead>
+            <tbody id="corpo-tabela-dashboard">
+                </tbody>
+        </table>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

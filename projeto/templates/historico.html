@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Histórico de Leituras</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Histórico Completo</h1>
+    <a href="/">← Voltar ao Painel</a>
+
+    <table border="1" style="margin-top: 20px;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Data/Hora</th>
+                <th>Temperatura (°C)</th>
+                <th>Umidade (%)</th>
+                <th>Pressão (hPa)</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="corpo-tabela-historico">
+            </tbody>
+        <!-- <tbody>
+            {% for leitura in leituras %}
+            <tr id="linha-{{ leitura.id }}">
+                <td>{{ leitura.id }}</td>
+                <td>{{ leitura.timestamp }}</td>
+                <td>{{ leitura.temperatura }}</td>
+                <td>{{ leitura.umidade }}</td>
+                <td>{{ leitura.pressao or 'N/A' }}</td>
+                <td>
+                    <button onclick="deletarLeitura('{{ leitura.id }}')" style="background: #ff4444; color: white; border: none; cursor: pointer;">Excluir</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody> -->
+    </table>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
